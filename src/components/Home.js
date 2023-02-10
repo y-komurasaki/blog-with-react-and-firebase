@@ -35,7 +35,7 @@ const Home = () => {
             <div className='postTextContainer'>{post.postText}</div>
             <div className='nameAndDeleteButton'>
               <h3>@{post.author ? post.author.username : "未登録のユーザー"}</h3>
-              {post.author.id === auth.currentUser.uid && (
+              {post.author.id === auth.currentUser?.uid && (
                 <button onClick={() => handleDelete(post.id)}>削除</button>
               )}
             </div>
